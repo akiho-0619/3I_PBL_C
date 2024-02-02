@@ -1,0 +1,9 @@
+with open(r"C:\Users\user\Documents\PBLmatome\PBLmatome\PBL_test - コピー\module\pdf\yotei.txt", "r", encoding="ANSI")as f:
+    get_data=f.readlines()
+text=[]
+for i in range(0, len(get_data), 3):
+    text.append(get_data[i][:len(get_data[i])-1] + get_data[i+1][:len(get_data[i+1])-1] + get_data[i+2][:len(get_data[i+2])-1])
+
+with open(r"C:\Users\user\Documents\PBLmatome\PBLmatome\PBL_test - コピー\module\pdf\output.txt", "w", encoding="ANSI")as f:
+    for i in text:
+        f.write(i+"\n")

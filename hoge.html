@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>アクセス</title>
+    <link rel="stylesheet" href="hoge.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="header_logo"><img src="../ktc-logo__white.svg" width=350, alt="logo"></a>
+        <div class="header_button">
+            <ul class="head_button">
+                <li>
+                    <ul class="head_button_1">
+                        <li><a href="home/home.html"><button>ホーム  </button></a></li>
+                        <li><a href="school_guide/home.html"><button>学校案内</button></a></li>
+                        <li><a href="course/home.html"><button>コース  </button></a></li>
+                        <li><a href="entrance_exam/home.html"><button>入試情報</button></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="head_button_2">
+                        <li><a href="sinro/home.html"><button>進路情報</button></a></li>
+                        <li><a href="student_activities/home.html"><button>学生活動</button></a></li>
+                        <li><a href="access/home.html"><button>アクセス</button></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <label name="a", id="a">px</label>
+    <script>
+        function resizeWindow(){
+            la=document.querySelector('label#a');
+            la.innerText=window.outerWidth;
+        }
+
+        window.onresize = resizeWindow;
+    </script>
+</body>
+</html>
