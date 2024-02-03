@@ -22,8 +22,8 @@ fs.readFile('module/pdf/output.txt', 'utf-8', (err, data) => {
     
 });
 
-const get_text: String[] =data.split("\r\n")
-    console.log(get_text);
+const get_text: string[] =data.split("\r\n")
+    //console.log(get_text);
 var yotei_ran: HTMLLabelElement[] = new Array(get_text.length);
 for(let i: number=0; i<get_text.length; i++){
     yotei_ran[i] = document.createElement("label")
@@ -31,7 +31,7 @@ for(let i: number=0; i<get_text.length; i++){
 }
 
 for(let i of yotei_ran){
-    document.querySelector("p#yotei_space").appendChild()
+    document.querySelector("p#yotei_space").appendChild(i)
 
 }
 
