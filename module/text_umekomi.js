@@ -3,7 +3,8 @@ console.log("aaa");
 //Object.defineProperty(exports, "__esModule", { value: true });
 //Object.defineProperty(exports, "__esModule", { value: true });
 
-console.log(loadFile("module/pdf/output.txt", "utf-8"));
+var fileContent = loadFile("module/pdf/output.txt");
+console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
     var xmlhttp = new XMLHttpRequest();
@@ -12,7 +13,7 @@ function loadFile(filePath) {
     if (xmlhttp.status == 200) {
         result = xmlhttp.responseText;
     }
-    console.log(result)
+    console.log(result);
     return result;
 }
 
