@@ -1,7 +1,7 @@
 "use strict";
-
+console.log("aaa");
 //Object.defineProperty(exports, "__esModule", { value: true });
-Object.defineProperty(exports, "__esModule", { value: true });
+//Object.defineProperty(exports, "__esModule", { value: true });
 
 console.log(loadFile("module/pdf/output.txt", "utf-8"));
 function loadFile(filePath) {
