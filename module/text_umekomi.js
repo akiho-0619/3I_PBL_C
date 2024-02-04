@@ -36,7 +36,7 @@ function text_sousa(fileContent){
     formattedDate=parseInt("3" ? parseInt(formattedDate[0])<=3: "2" + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
     //console.log(formattedDate);
     var get_text = fileContent.split("\r\n");
-    var match_text=array();
+    var match_text=Array();
     for(i=0; i<get_text.length; i++){
         var now_text= get_text[i];
         var text_day= parseInt("3" ? parseInt(get_text.split("日")[0].split("月")[0])<=3: "2" + get_text.split("日")[0].split("月")[0].padStart(2, "0")+  get_text.split("日")[0].split("月")[1].padStart(2, "0"));
