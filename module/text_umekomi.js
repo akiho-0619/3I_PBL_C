@@ -41,6 +41,7 @@ for (var i = 0; i < get_text.length; i++) {
 }
 console.log("output");
 for (var index = 0; index < yotei_ran.length; index++) {
+    console.log(index)
     var i = yotei_ran_1[index];
     document.querySelector("label#yotei_space").appendChild(i);
 }
