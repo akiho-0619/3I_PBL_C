@@ -1,10 +1,10 @@
 "use strict";
 console.log("aaa");
 
-
+var text_repl = text_replace(text_henkan);
 var fileContent = loadFile("module/pdf/output.txt");
 var text_henkan = text_sousa(fileContent);//fileContent
-var text_repl = text_replace(text_henkan);
+
 //console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
@@ -48,7 +48,7 @@ function text_sousa(fileContent){
 }
 
 function text_replace(get_text){
-    console.log(a);
+    console.log("a");
     const test_p= document.querySelector("#yotei_space");
     test_p.textContent = "test_text";
 
