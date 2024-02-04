@@ -142,10 +142,11 @@ footer{
     margin: 0px, 0px, 0px, auto;
     margin-bottom: 50px;
 
-    height: 300px;
+    height: auto;
 }
 
 .easy_link li{
+    
     float: left;
     margin-right: 40px;
 }
@@ -214,4 +215,5 @@ footer{
     margin-top: 300px;
     /*margin: auto;*/
     width: 100vh;
+    min-height: auto;
 }
