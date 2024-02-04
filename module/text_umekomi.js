@@ -4,6 +4,7 @@ console.log("aaa");
 //Object.defineProperty(exports, "__esModule", { value: true });
 
 var fileContent = loadFile("module/pdf/output.txt");
+var text_repl = text_replace();
 //console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
@@ -29,24 +30,28 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
     
 });
  */
-const test_p= document.getElementById("label#yotei_space")
-test_p.textContent("test_text")
 
-var get_text = data.split("\r\n");
-//console.log(get_text);
-var yotei_ran = new Array(get_text.length);
-for (var i = 0; i < get_text.length; i++) {
-    yotei_ran[i] = document.createElement("label");
-    yotei_ran[i].textContent = get_text[i];
-}
-console.log("output");
-for (var index = 0; index < yotei_ran.length; index++) {
-    console.log(index)
-    var i = yotei_ran_1[index];
-    document.querySelector("label#yotei_space").appendChild(i);
+function text_replace(){
+    const test_p= document.getElementById("label#yotei_space")
+    test_p.textContent("test_text")
+
+    var get_text = data.split("\r\n");
+    //console.log(get_text);
+    var yotei_ran = new Array(get_text.length);
+    for (var i = 0; i < get_text.length; i++) {
+        yotei_ran[i] = document.createElement("label");
+        yotei_ran[i].textContent = get_text[i];
+    }
+    console.log("output");
+    for (var index = 0; index < yotei_ran.length; index++) {
+        console.log(index)
+        var i = yotei_ran_1[index];
+        document.querySelector("label#yotei_space").appendChild(i);
+    }
+
+    callPythonScript();
 }
 
-callPythonScript();
 
 
 // JavaScript (例: script.js)
