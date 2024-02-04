@@ -1,10 +1,10 @@
 "use strict";
 console.log("aaa");
-//Object.defineProperty(exports, "__esModule", { value: true });
-//Object.defineProperty(exports, "__esModule", { value: true });
+
 
 var fileContent = loadFile("module/pdf/output.txt");
-var text_repl = text_replace("a");
+var text_henkan = text_sousa(fileContent);//fileContent
+var text_repl = text_replace(text_henkan);
 //console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
@@ -30,13 +30,29 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
     
 });
  */
+function text_sousa(fileContent){
+    const today = new Date();
+    var formattedDate = today.toISOString().slice(0, 10).split("-");
+    formattedDate=parseInt("3" ? parseInt(formattedDate[0])<=3: "2" + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
+    //console.log(formattedDate);
+    var get_text = fileContent.split("\r\n");
+    var_match_text=new array;
+    for(i=0; i<get_text.length; i++){
+        var now_text= get_text[i];
+        var text_day= parseInt("3" ? parseInt(get_text.split("日")[0].split("月")[0])<=3: "2" + get_text.split("日")[0].split("月")[0].padStart(2, "0")+  get_text.split("日")[0].split("月")[1].padStart(2, "0"));
+        if( formattedDate <= text_day <= (formattedDate+100 ? formattedDate+100 > 21231: formattedDate-1100+10000)){
+            var_match_text.push(now_text);
+        }
+    }
+    return now_text;
+}
 
-function text_replace(a){
+function text_replace(get_text){
     console.log(a);
     const test_p= document.querySelector("#yotei_space");
     test_p.textContent = "test_text";
 
-    var get_text = fileContent.split("\r\n");
+    
     //console.log(get_text);
     var yotei_ran = new Array(get_text.length);
     for (var i = 0; i < get_text.length; i++) {
