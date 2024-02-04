@@ -151,7 +151,7 @@ footer{
 .easy_link li{
     
     float: left;
-    margin-right: 40px;
+    margin: auto;
 }
 
 .easy_link a button{
