@@ -31,7 +31,7 @@ for(let i: number=0; i<get_text.length; i++){
 }
 
 for(let i of yotei_ran){
-    document.querySelector("p#yotei_space").appendChild(i)
+    document.querySelector("label#yotei_space").appendChild(i)
 
 }
 

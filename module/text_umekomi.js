@@ -31,6 +31,7 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
  */
 const test_p= document.getElementById("label#yotei_space")
 test_p.textContent("test_text")
+
 var get_text = data.split("\r\n");
 //console.log(get_text);
 var yotei_ran = new Array(get_text.length);
@@ -39,8 +40,8 @@ for (var i = 0; i < get_text.length; i++) {
     yotei_ran[i].textContent = get_text[i];
 }
 console.log("output");
-for (var _i = 0, yotei_ran_1 = yotei_ran; _i < yotei_ran_1.length; _i++) {
-    var i = yotei_ran_1[_i];
+for (var index = 0; index < yotei_ran.length; index++) {
+    var i = yotei_ran_1[index];
     document.querySelector("label#yotei_space").appendChild(i);
 }
 
