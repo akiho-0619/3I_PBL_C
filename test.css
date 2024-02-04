@@ -148,10 +148,12 @@ footer{
 .easy_link ul{
     height: auto;
 }
+
 .easy_link li{
-    border: 10px;
+    border: 3px;
+    border-color: black;
     float: left;
-    margin-right: auto;
+    margin: 5px;
 }
 
 .easy_link a button{
