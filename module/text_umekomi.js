@@ -4,7 +4,7 @@ console.log("aaa");
 //Object.defineProperty(exports, "__esModule", { value: true });
 
 var fileContent = loadFile("module/pdf/output.txt");
-console.log(fileContent);
+//console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
     var xmlhttp = new XMLHttpRequest();
@@ -13,7 +13,7 @@ function loadFile(filePath) {
     if (xmlhttp.status == 200) {
         result = xmlhttp.responseText;
     }
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
@@ -46,10 +46,11 @@ for (var _i = 0, yotei_ran_1 = yotei_ran; _i < yotei_ran_1.length; _i++) {
 
 callPythonScript();
 
+
 // JavaScript (例: script.js)
 function callPythonScript() {
     // Pythonスクリプトが配置されているURLを指定
-    const pythonScriptUrl = 'module_main.py';
+    const pythonScriptUrl = 'module/module_main.py';
 
     // Ajaxリクエストを送信
     fetch(pythonScriptUrl)
