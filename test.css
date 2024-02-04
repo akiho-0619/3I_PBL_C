@@ -145,6 +145,9 @@ footer{
     height: auto;
 }
 
+.easy_link ul{
+    height: auto;
+}
 .easy_link li{
     
     float: left;
