@@ -42,7 +42,7 @@ function text_sousa(fileContent){
         var now_text= get_text[i];
         var text_day= parseInt("3" ? parseInt(now_text.split("日")[0].split("月")[0])<=3: "2" + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  now_text.split("日")[0].split("月")[1].padStart(2, "0"));
         if (i==0){
-            console.log(text_day);
+            console.log(now_text.split("日")[0].split("月")[0]);
         }
         if( formattedDate <= text_day <= (formattedDate+100 ? formattedDate+100 > 21231: formattedDate-1100+10000)){
             match_text.push(now_text);
