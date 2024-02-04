@@ -45,7 +45,7 @@ function text_sousa(fileContent){
             match_text.push(now_text);
         }
     }
-    return now_text;
+    return match_text;
 }
 
 function text_replace(get_text){
