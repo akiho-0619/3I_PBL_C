@@ -1,10 +1,10 @@
 "use strict";
 console.log("aaa");
 
-var text_repl = text_replace(text_henkan);
+var go_py = callPythonScript();
 var fileContent = loadFile("module/pdf/output.txt");
 var text_henkan = text_sousa(fileContent);//fileContent
-
+var text_repl = text_replace(text_henkan);
 //console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
@@ -66,7 +66,7 @@ function text_replace(get_text){
         document.querySelector("label#yotei_space").appendChild(i);
     }
 
-    callPythonScript();
+    
 }
 
 
