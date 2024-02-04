@@ -34,7 +34,7 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 function text_replace(a){
     console.log(a);
     const test_p= document.getElementById("label#yotei_space");
-    test_p.textContent("test_text");
+    test_p.textContent = "test_text";
 
     var get_text = data.split("\r\n");
     //console.log(get_text);
@@ -46,7 +46,7 @@ function text_replace(a){
     console.log("output");
     for (var index = 0; index < yotei_ran.length; index++) {
         console.log(index)
-        var i = yotei_ran_1[index];
+        var i = yotei_ran[index];
         document.querySelector("label#yotei_space").appendChild(i);
     }
 
