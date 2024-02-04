@@ -4,7 +4,7 @@ console.log("aaa");
 //Object.defineProperty(exports, "__esModule", { value: true });
 
 var fileContent = loadFile("module/pdf/output.txt");
-var text_repl = text_replace();
+var text_repl = text_replace("a");
 //console.log(fileContent);
 function loadFile(filePath) {
     var result = null;
@@ -31,9 +31,10 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 });
  */
 
-function text_replace(){
-    const test_p= document.getElementById("label#yotei_space")
-    test_p.textContent("test_text")
+function text_replace(a){
+    console.log(a);
+    const test_p= document.getElementById("label#yotei_space");
+    test_p.textContent("test_text");
 
     var get_text = data.split("\r\n");
     //console.log(get_text);
