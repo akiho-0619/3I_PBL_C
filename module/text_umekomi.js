@@ -36,7 +36,7 @@ function text_replace(a){
     const test_p= document.querySelector("#yotei_space");
     test_p.textContent = "test_text";
 
-    var get_text = data.split("\r\n");
+    var get_text = fileContent.split("\r\n");
     //console.log(get_text);
     var yotei_ran = new Array(get_text.length);
     for (var i = 0; i < get_text.length; i++) {
