@@ -33,7 +33,7 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 
 function text_replace(a){
     console.log(a);
-    const test_p= document.getElementById("#yotei_space");
+    const test_p= document.querySelector("#yotei_space");
     test_p.textContent = "test_text";
 
     var get_text = data.split("\r\n");
