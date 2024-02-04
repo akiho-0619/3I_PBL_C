@@ -40,7 +40,7 @@ function text_sousa(fileContent){
     var match_text=Array();
     for(var i=0; i<get_text.length; i++){
         var now_text= get_text[i];
-        var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  now_text.split("日")[0].split("月")[1].padStart(2, "0"));
+        var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  (now_text.split("日")[0].split("月")[1].padStart(2, "0")));
         if (i==0){
             console.log("debug")
             console.log(parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")));
