@@ -16,7 +16,7 @@ function loadFile(filePath) {
     //console.log(result);
     return result;
 }
-
+/**
 const fs = require("fs");
 var data = "";
 // ファイル非同期読み込み
@@ -28,7 +28,7 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 
     
 });
-
+ */
 const test_p= document.getElementById("p#yotei_space")
 test_p.textContent("test_text")
 var get_text = data.split("\r\n");
