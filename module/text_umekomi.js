@@ -33,14 +33,14 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 function text_sousa(fileContent){
     const today = new Date();
     var formattedDate = today.toISOString().slice(0, 10).split("-");
-    formattedDate=parseInt(parseInt(formattedDate[0])<=3 ? "3" : "2" + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
+    formattedDate=parseInt((parseInt(formattedDate[0])<=3 ? "3" : "2") + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
     //console.log(formattedDate);
     var get_text = fileContent.split("\n");
     console.log(get_text)
     var match_text=Array();
     for(var i=0; i<get_text.length; i++){
         var now_text= get_text[i];
-        var text_day= parseInt(parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2" + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  now_text.split("日")[0].split("月")[1].padStart(2, "0"));
+        var text_day= parseInt(parseInt((now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  now_text.split("日")[0].split("月")[1].padStart(2, "0"));
         if (i==0){
             console.log("debug")
             console.log(parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3" : "2");
