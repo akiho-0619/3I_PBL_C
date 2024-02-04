@@ -63,4 +63,6 @@ function callPythonScript() {
         .catch(error => {
             console.error('エラーが発生しました:', error);
         });
+
+    console.log("python");
 }
