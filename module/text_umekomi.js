@@ -41,5 +41,5 @@ for (var i = 0; i < get_text.length; i++) {
 console.log("output");
 for (var _i = 0, yotei_ran_1 = yotei_ran; _i < yotei_ran_1.length; _i++) {
     var i = yotei_ran_1[_i];
-    document.querySelector("p#yotei_space").appendChild(i);
+    document.querySelector("label#yotei_space").appendChild(i);
 }
