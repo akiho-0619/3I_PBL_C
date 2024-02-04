@@ -43,3 +43,21 @@ for (var _i = 0, yotei_ran_1 = yotei_ran; _i < yotei_ran_1.length; _i++) {
     var i = yotei_ran_1[_i];
     document.querySelector("label#yotei_space").appendChild(i);
 }
+
+callPythonScript();
+
+// JavaScript (例: script.js)
+function callPythonScript() {
+    // Pythonスクリプトが配置されているURLを指定
+    const pythonScriptUrl = 'module_main.py';
+
+    // Ajaxリクエストを送信
+    fetch(pythonScriptUrl)
+        .then(response => response.text())
+        .then(data => {
+            console.log('Pythonスクリプトの実行結果:', data);
+        })
+        .catch(error => {
+            console.error('エラーが発生しました:', error);
+        });
+}

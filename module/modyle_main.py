@@ -17,8 +17,7 @@ now_time      = [int(i) for i in now_time]
 
 print(before_access, now_time)
 if before_access[0]<now_time[0] or before_access[1]<now_time[1] or before_access[2]<now_time[2]:
-    print("other day")
-    #scrape.scr("https://www.ktc.ac.jp/dept/kyomu/schedule/")    #学校の行事予定のページのスクレイピング
+    scrape.scr("https://www.ktc.ac.jp/dept/kyomu/schedule/")    #学校の行事予定のページのスクレイピング
     pdf_folder="module/pdf"
     with open(pdf_folder+"/access_log.txt", "w")as f:   #最終アクセス日の更新
         f.write(time.strftime("%Y%m%d"))
@@ -66,7 +65,7 @@ if before_access[0]<now_time[0] or before_access[1]<now_time[1] or before_access
 
         
 
-    with open(r"C:\Users\user\Documents\3I_PBL_C.github.io\module\pdf\yotei.txt", "r", encoding="utf-8")as f:
+    with open(r"module\pdf\yotei.txt", "r", encoding="utf-8")as f:
         get_data=f.readlines()
 
 
@@ -92,27 +91,7 @@ if before_access[0]<now_time[0] or before_access[1]<now_time[1] or before_access
             add_text=month + "月"+ day + "日" + get_data[index+1] + " "  + get_data[index+2]
             index+=3
 
-            """
-            try:
-                while int(day)!= maximum_day[int(month)-1] and not re.fullmatch(" *[0-9] *", get_data[index]):
-                    add_text+=("\n" + get_data[index])
-                    index+=1
-
-                if int(day)== maximum_day[int(month)-1]:
-                    while not re.fullmatch(" *[0-9]+ *月 *\n", get_data[index]):
-                        overflaw.append(get_data[index])
-                        index+=1
-
-                    for _ in range(len(overflaw)%3):
-                        add_text+=("\n" + overflaw[0].pop)
-
-                text.append(add_text)
-                for i in range(0, len(overflaw)/3):
-                    text.append((month + "月 " + overflaw[i] + "\n") if overflaw[i] != "" else "")
-
-            except IndexError:
-                continue
-            """
+            
             if add_text!="":
                 text.append((add_text.replace("\n", "") + "\n") if
                 (re.fullmatch("[0-9]+月[0-9]+日 \(.\)  ?.?.+", add_text.replace("\n", ""))
