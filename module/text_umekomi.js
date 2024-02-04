@@ -35,7 +35,7 @@ function text_sousa(fileContent){
     var formattedDate = today.toISOString().slice(0, 10).split("-");
     formattedDate=parseInt("3" ? parseInt(formattedDate[0])<=3: "2" + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
     //console.log(formattedDate);
-    var get_text = fileContent.split("\r\n");
+    var get_text = fileContent.split("\n");
     console.log(get_text)
     var match_text=Array();
     for(var i=0; i<get_text.length; i++){
