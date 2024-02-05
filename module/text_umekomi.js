@@ -33,7 +33,7 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 function text_sousa(fileContent){
     const today = new Date();
     var formattedDate = today.toISOString().slice(0, 10).split("-");
-    formattedDate=parseInt((parseInt(formattedDate[0])<=3 ? "3" : "2") + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
+    formattedDate=parseInt((parseInt(formattedDate[1])<=3 ? "3" : "2") + formattedDate[1].padStart(2, "0")+  formattedDate[2].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
     //console.log(formattedDate);
     var get_text = fileContent.split("\n");
     console.log(get_text)
