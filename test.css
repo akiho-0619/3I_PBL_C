@@ -143,6 +143,9 @@ footer{
     margin-bottom: 50px;
 
     height: auto;
+    border: 5px;
+    
+    border-color: rgb(0, 112, 176);
 }
 
 .easy_link ul{
