@@ -40,6 +40,7 @@ function text_sousa(fileContent){
     var match_text=Array();
     for(var i=0; i<get_text.length; i++){
         var now_text= get_text[i];
+        now_text=now_text.replace("※41", "[祥月命日]世耕弘一先生").replace("※91", "[祥月命日]:世耕政隆先生").replace("※92", "[祥月命日]:世耕弘昭先生").replace("※21", "5年生登校禁止").replace("※31", "1～4年生登校禁止").replace("※32", "5年生登校禁止")
         try{
             var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  String((now_text.split("日")[0].split("月")[1]).padStart(2, "0")));
             if (i==0){
