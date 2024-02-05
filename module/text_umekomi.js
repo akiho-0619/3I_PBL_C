@@ -40,14 +40,16 @@ function text_sousa(fileContent){
     var match_text=Array();
     for(var i=0; i<get_text.length; i++){
         var now_text= get_text[i];
-        var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  String((now_text.split("日")[0].split("月")[1]).padStart(2, "0")));
-        if (i==0){
-            console.log("debug")
-            //console.log(String(now_text.split("日")[0].split("月")[1])).padStart(2, "0");
-        }
-        if( formattedDate <= text_day <= (formattedDate+100 > 21231 ? formattedDate+100 : formattedDate-1100+10000)){
-            match_text.push(now_text);
-        }
+        try{
+            var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  String((now_text.split("日")[0].split("月")[1]).padStart(2, "0")));
+            if (i==0){
+                console.log("debug")
+                //console.log(String(now_text.split("日")[0].split("月")[1])).padStart(2, "0");
+            }
+            if( formattedDate <= text_day <= (formattedDate+100 > 21231 ? formattedDate+100 : formattedDate-1100+10000)){
+                match_text.push(now_text);
+            }
+        }catch(error){}
     }
     return match_text;
 }
