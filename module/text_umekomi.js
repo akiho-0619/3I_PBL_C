@@ -33,21 +33,24 @@ fs.readFile('module/pdf/output.txt', 'utf-8', function (err, data) {
 function text_sousa(fileContent){
     const today = new Date();
     var formattedDate = today.toISOString().slice(0, 10).split("-");
-    formattedDate=parseInt((parseInt(formattedDate[0])<=3 ? "3" : "2") + formattedDate[0].padStart(2, "0")+  formattedDate[1].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
+    formattedDate=parseInt((parseInt(formattedDate[1])<=3 ? "3" : "2") + formattedDate[1].padStart(2, "0")+  formattedDate[2].padStart(2, "0"));   //ex 10/05 -> 21005 01/05 -> 30105
     //console.log(formattedDate);
     var get_text = fileContent.split("\n");
     console.log(get_text)
     var match_text=Array();
     for(var i=0; i<get_text.length; i++){
         var now_text= get_text[i];
-        var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  String((now_text.split("日")[0].split("月")[1]).padStart(2, "0")));
-        if (i==0){
-            console.log("debug")
-            //console.log(String(now_text.split("日")[0].split("月")[1])).padStart(2, "0");
-        }
-        if( formattedDate <= text_day <= (formattedDate+100 > 21231 ? formattedDate+100 : formattedDate-1100+10000)){
-            match_text.push(now_text);
-        }
+        now_text=now_text.replace("※41", "[祥月命日]世耕弘一先生").replace("※91", "[祥月命日]:世耕政隆先生").replace("※92", "[祥月命日]:世耕弘昭先生").replace("※21", "5年生登校禁止").replace("※31", "1～4年生登校禁止").replace("※32", "5年生登校禁止").replace("\n", " ").replace("\t", " ")
+        try{
+            var text_day= parseInt((parseInt(now_text.split("日")[0].split("月")[0])<=3 ? "3": "2") + now_text.split("日")[0].split("月")[0].padStart(2, "0")+  String((now_text.split("日")[0].split("月")[1]).padStart(2, "0")));
+            if (i==0){
+                console.log("debug")
+                //console.log(String(now_text.split("日")[0].split("月")[1])).padStart(2, "0");
+            }
+            if( formattedDate <= text_day && text_day <= (formattedDate+100 > 21231 ? formattedDate+100 : formattedDate-1100+10000)){
+                match_text.push(now_text);
+            }
+        }catch(error){}
     }
     return match_text;
 }
