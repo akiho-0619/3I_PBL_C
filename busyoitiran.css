@@ -131,14 +131,14 @@ main{
     height: 200;
 }
 
-.main_contents ul li a{
+.main ul li a{
     border-color: rgb(150, 200, 255);
     border: 1px;
     text-decoration: underline;
     padding-top: 20px;
 }
 
-.main_contents ul li a button{
+.main ul li a button{
     font-size: 16px;
     width: 230px;
     height: 50px;
