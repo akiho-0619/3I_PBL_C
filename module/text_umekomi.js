@@ -46,7 +46,7 @@ function text_sousa(fileContent){
                 console.log("debug")
                 //console.log(String(now_text.split("日")[0].split("月")[1])).padStart(2, "0");
             }
-            if( formattedDate <= text_day <= (formattedDate+100 > 21231 ? formattedDate+100 : formattedDate-1100+10000)){
+            if( formattedDate <= text_day && text_day <= (formattedDate+100 > 21231 ? formattedDate+100 : formattedDate-1100+10000)){
                 match_text.push(now_text);
             }
         }catch(error){}
